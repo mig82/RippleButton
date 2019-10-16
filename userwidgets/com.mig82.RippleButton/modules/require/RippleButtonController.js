@@ -1,6 +1,5 @@
 define(function() {
 
-	var isClicked = false;
 	const doNothing = ()=>{};
 	const MIN_RIPPLE_DIM = "5%";
 
@@ -99,7 +98,7 @@ define(function() {
 					animationStart: doNothing,
 					animationEnd: () => {
 						this.hideRipple();
-						isClicked = false;
+						this.isClicked = false;
 					}
 				});
 			}
@@ -124,6 +123,8 @@ define(function() {
 			}
 		},
 
+		isClicked: false,
+
 		preShow: function(){
 			this.keepEffectsRatio();
 			this.hideBackground();
@@ -131,11 +132,11 @@ define(function() {
 		},
 
 		postShow: function(){
-			this.view.button1.onTouchStart = () => {
-				if(!isClicked){
+			this.view.button1.onClick = () => {
+				if(!this.isClicked){
 					this.showBackground();
 					this.growRipple();
-					isClicked = true;
+					this.isClicked = true;
 				}
 			};
 		},
