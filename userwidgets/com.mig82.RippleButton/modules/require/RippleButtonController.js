@@ -114,7 +114,10 @@ define(function() {
 				this.view.ripple.animate(animation, rippleConfig, {
 					animationStart: doNothing,
 					animationEnd: () => {
-						this.fadeEffects();
+						//If it's not released, then it's a long press, so don't fade backcround and ripple.
+						if(!this.isReleased) this.isClicked = false;
+						//If it is released, then it was a brief press, so fade background and ripple.
+						else this.fadeEffects();
 					}
 				});
 			}
@@ -123,7 +126,11 @@ define(function() {
 			}
 		},
 
+		//Whether the button has been clicked the animation is ongoing.
 		isClicked: false,
+
+		//Whether the button has been released, used to not fade effects in long press.
+		isReleased: true,
 
 		preShow: function(){
 			this.keepEffectsRatio();
@@ -132,12 +139,18 @@ define(function() {
 		},
 
 		postShow: function(){
-			this.view.button1.onClick = () => {
+			this.view.button1.onTouchStart = () => {
 				if(!this.isClicked){
+					this.isClicked = true;
+					this.isReleased = false;
 					this.showBackground();
 					this.growRipple();
-					this.isClicked = true;
 				}
+			};
+			this.view.button1.onTouchEnd = () => {
+				this.isReleased = true;
+				//If the button is released after a long press, fade background and ripple.
+				if(!this.isClicked)this.fadeEffects();
 			};
 		},
 
