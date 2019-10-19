@@ -19,27 +19,30 @@
     "_title_": null,
     "addWidgetsdone": false,
     "allboxes": [],
-    "android": {
-        "needAppMenu": false,
-        "psp": {
-            "windowSoftInputMode": 2
-        }
-    },
     "androidwearos": {
         "needAppMenu": false
     },
+    "breakpointInfo": {
+        "b1": {
+            "width": 1200
+        },
+        "b2": {
+            "width": 1024
+        },
+        "b3": {
+            "width": 640
+        }
+    },
     "canUpdateUI": true,
+    "canvasWidth": 1200,
     "children": [
-        "menuButton",
-        "blockButton",
-        "blockButton2",
-        "blockButton3",
-        "floatingButton"
+        "rippleButton1",
+        "rippleButton2"
     ],
     "containerweight": 100,
     "controllerInfo": {
         "default": {
-            "channel": "mobile",
+            "channel": "desktop",
             "name": "Form1Controller"
         }
     },
@@ -59,42 +62,12 @@
         },
         "titleBar": false
     },
-    "iphone": {
-        "needAppMenu": false,
-        "psp": {
-            "inputAccessoryViewType": 4,
-            "titleBarAttributes": {
-                "barStyle": 0,
-                "hidesBackButton": false,
-                "kuid": "d425637fcc89421b887c8e3fa30a70b9",
-                "leftBarButtonItems": [],
-                "leftItemsSupplementBackButton": true,
-                "prompt": "",
-                "renderTitleText": true,
-                "rightBarButtonItems": [
-                    {
-                        "enabled": true,
-                        "info": {
-                            "title": "Edit"
-                        },
-                        "kuid": "f67055a2491f40289c0312f1c3cf6c97",
-                        "style": 0,
-                        "tintColor": "4b88f100",
-                        "type": 1
-                    }
-                ],
-                "tintColor": "4b88f100",
-                "translucent": true
-            }
-        },
-        "titleBar": false
-    },
     "iscustomlayout": false,
     "isvisible": true,
     "kiosk": {
         "needAppMenu": false
     },
-    "kuid": "ed6e34fc4d534b279d77a3d67e4e3a2c",
+    "kuid": "b6f43845335e49e19bcf6e06077ccdb6",
     "layouttype": 2,
     "name": "kony.ui.Form2",
     "needappmenu": false,
@@ -104,16 +77,7 @@
     "retainscrollposition": false,
     "snapgridsize": 10,
     "snaptogrid": true,
-    "spaan": {
-        "needAppMenu": false
-    },
     "spaandroidtablet": {
-        "needAppMenu": false
-    },
-    "spabb": {
-        "needAppMenu": false
-    },
-    "spaip": {
         "needAppMenu": false
     },
     "spaipad": {
@@ -122,17 +86,11 @@
     "spawindowstablet": {
         "needAppMenu": false
     },
-    "spawinphone8": {
-        "needAppMenu": false
-    },
     "titleBarSkin": "s68fe32542c1418c9a3573582d495d62",
     "titlebar": true,
     "type": 3,
     "wType": "Form",
     "windows8": {
-        "needAppMenu": false
-    },
-    "winphone8": {
         "needAppMenu": false
     }
 }

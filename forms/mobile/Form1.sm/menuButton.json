@@ -2,6 +2,10 @@
     "@class": "com.kony.gen.viz.model.component.KVizUserWidget",
     "DNDConfig": null,
     "__parentReadjusting__": false,
+    "_bottom_": {
+        "type": "number",
+        "value": "0"
+    },
     "_children_": [],
     "_height_": {
         "type": "string",
@@ -22,7 +26,7 @@
     ],
     "_percent_": true,
     "_render_": true,
-    "_skin_": "s133a656535149a3a939ad02be7deed1",
+    "_skin_": "s42383a060c442edaff19f39e0f780e9",
     "_width_": {
         "type": "string",
         "value": "100dp"
@@ -31,11 +35,7 @@
     "canUpdateUI": true,
     "centerx": {
         "type": "string",
-        "value": "50%"
-    },
-    "centery": {
-        "type": "string",
-        "value": "50%"
+        "value": "25%"
     },
     "clipbounds": true,
     "containerweight": 0,
@@ -43,7 +43,7 @@
         "text": ""
     },
     "enablescrolling": true,
-    "id": "rippleButton1",
+    "id": "menuButton",
     "info": null,
     "iscustomlayout": false,
     "issegmentchild": false,

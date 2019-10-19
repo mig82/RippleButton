@@ -38,6 +38,41 @@
                         "wType": "Button"
                     },
                     "srcWgtKUID": "dc9c874b04924cef9adfe07235ff4fdd"
+                },
+                {
+                    "access": "Enable",
+                    "group": "Look & Feel",
+                    "kuid": "d671a13752654d94a54f4a01e51ab031",
+                    "originalPropertyKey": "skin",
+                    "propertyIndex": 2,
+                    "propertyKey": "buttonNormalSkin",
+                    "pw": {
+                        "access": "readwrite",
+                        "category": "skin",
+                        "dependentKeysKUIDs": null,
+                        "displayName": "Button Normal Skin",
+                        "srcWidget": "button1",
+                        "wType": "Button"
+                    },
+                    "srcWgtKUID": "dc9c874b04924cef9adfe07235ff4fdd"
+                },
+                {
+                    "access": "Enable",
+                    "defaultSkinKUID": "s303bb0dd90d47c4a9e4c1396f9db558",
+                    "group": "Look & Feel",
+                    "kuid": "f6b88fce32a14eae9a572e92dafa4cbd",
+                    "originalPropertyKey": "focusSkin",
+                    "propertyIndex": 3,
+                    "propertyKey": "buttonFocusSkin",
+                    "pw": {
+                        "access": "readwrite",
+                        "category": "skin",
+                        "dependentKeysKUIDs": null,
+                        "displayName": "Button Focus Skin",
+                        "srcWidget": "button1",
+                        "wType": "Button"
+                    },
+                    "srcWgtKUID": "dc9c874b04924cef9adfe07235ff4fdd"
                 }
             ]
         },
