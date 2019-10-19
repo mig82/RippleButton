@@ -1,19 +1,23 @@
 define(function() {
 
 	const doNothing = ()=>{};
+
 	const MIN_RIPPLE_DIM = "5%";
 
+	const BACKGROUND_OPACITY = 0.25;
+	const RIPPLE_OPACITY = 0.25;
+
 	const rippleSteps = {
-		10: {
+		0: {
 			width: MIN_RIPPLE_DIM,
 			height: MIN_RIPPLE_DIM,
-			opacity: 1,
+			opacity: RIPPLE_OPACITY,
 			stepConfig: {timingFunction: kony.anim.LINEAR}
 		},
 		100: {
 			width: "100%",
 			height: "100%",
-			opacity: 1,
+			opacity: RIPPLE_OPACITY,
 			stepConfig: {timingFunction: kony.anim.EASE_OUT}
 		}
 	};
@@ -27,7 +31,7 @@ define(function() {
 
 	const backgroundSteps = {
 		100: {
-			opacity: 1,
+			opacity: BACKGROUND_OPACITY,
 			stepConfig: {timingFunction: kony.anim.EASE_OUT}
 		}
 	};
