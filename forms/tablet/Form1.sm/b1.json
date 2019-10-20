@@ -2,6 +2,10 @@
     "@class": "com.kony.gen.viz.model.component.KVizUserWidget",
     "DNDConfig": null,
     "__parentReadjusting__": false,
+    "_bottom_": {
+        "type": "number",
+        "value": "330"
+    },
     "_children_": [],
     "_height_": {
         "type": "string",
@@ -22,34 +26,30 @@
     ],
     "_percent_": true,
     "_render_": true,
-    "_right_": {
-        "type": "number",
-        "value": "10"
-    },
-    "_skin_": "s2801bb39ece4422b00cd052569765e3",
-    "_top_": {
-        "type": "number",
-        "value": "10"
-    },
+    "_skin_": "s089d55edda4402fbcb5be64fb50d423",
     "_width_": {
         "type": "string",
-        "value": "50dp"
+        "value": "90%"
     },
     "autogrowmode": 0,
     "canUpdateUI": true,
+    "centerx": {
+        "type": "string",
+        "value": "50%"
+    },
     "clipbounds": true,
     "containerweight": 0,
     "data": {
-        "buttonNormalSkin": "s59b14dfab69403dad8e512745f0cfe6",
-        "text": ""
+        "buttonNormalSkin": "s303bb0dd90d47c4a9e4c1396f9db558",
+        "text": "  b1 90% x 50Dp"
     },
     "enablescrolling": true,
-    "id": "floatingButton",
+    "id": "b1",
     "info": null,
     "iscustomlayout": false,
     "issegmentchild": false,
     "isvisible": true,
-    "kuid": "d1bac15592f5403da407966630754192",
+    "kuid": "da293a5db6a4473282ad72d9628c2085",
     "layouttype": 2,
     "masterType": 1,
     "name": "kony.ui.UserWidgetInstance",

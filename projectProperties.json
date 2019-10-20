@@ -686,6 +686,7 @@
     "support64bitandwear": "false",
     "supportX86Devices": "false",
     "supportX86Devicesandwear": "false",
+    "tabletstartupformkey": "hff94aced42c49e4806aaf566e3afc34",
     "tags": {
         "android": {
             "activity_child_tags": "",

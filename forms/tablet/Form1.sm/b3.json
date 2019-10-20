@@ -12,8 +12,8 @@
         "value": "50dp"
     },
     "_left_": {
-        "type": "number",
-        "value": "0"
+        "type": "string",
+        "value": "20dp"
     },
     "_margin_": [
         0,
@@ -31,28 +31,25 @@
     "_percent_": true,
     "_render_": true,
     "_right_": {
-        "type": "number",
-        "value": "0"
+        "type": "string",
+        "value": "10%"
     },
     "_skin_": "s089d55edda4402fbcb5be64fb50d423",
     "autogrowmode": 0,
     "canUpdateUI": true,
-    "centerx": {
-        "type": "string",
-        "value": "50.04%"
-    },
     "clipbounds": true,
     "containerweight": 0,
     "data": {
-        "text": ""
+        "buttonNormalSkin": "s303bb0dd90d47c4a9e4c1396f9db558",
+        "text": " b3 20Dp left, 10% right"
     },
     "enablescrolling": true,
-    "id": "blockButton3",
+    "id": "b3",
     "info": null,
     "iscustomlayout": false,
     "issegmentchild": false,
     "isvisible": true,
-    "kuid": "bbd1abaa4c754a789e4d30974aabb88a",
+    "kuid": "e906acd56b0b4bc5a49f0c2908615b6d",
     "layouttype": 2,
     "masterType": 1,
     "name": "kony.ui.UserWidgetInstance",
