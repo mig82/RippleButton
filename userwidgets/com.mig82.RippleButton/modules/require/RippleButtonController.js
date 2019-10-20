@@ -7,6 +7,10 @@ define(function() {
 	const BACKGROUND_OPACITY = 0.25;
 	const RIPPLE_OPACITY = 0.25;
 
+	const DEFAULT_RIPPLE_DURATION = 0.6;
+	const DEFAULT_BACKGROUND_DURATION = 0.5;
+	const DEFAULT_FADE_DURATION = 0.4;
+
 	const rippleSteps = {
 		0: {
 			width: MIN_RIPPLE_DIM,
@@ -22,25 +26,11 @@ define(function() {
 		}
 	};
 
-	const rippleConfig = {
-		"duration": 0.6,
-		"iterationCount": 1,
-		"delay": 0,
-		"fillMode": kony.anim.FILL_MODE_FORWARDS
-	};
-
 	const backgroundSteps = {
 		100: {
 			opacity: BACKGROUND_OPACITY,
 			stepConfig: {timingFunction: kony.anim.EASE_OUT}
 		}
-	};
-
-	const backgroundConfig = {
-		"duration": 0.5,
-		"iterationCount": 1,
-		"delay": 0,
-		"fillMode": kony.anim.FILL_MODE_FORWARDS
 	};
 
 	const fadeSteps = {
@@ -50,14 +40,13 @@ define(function() {
 		}
 	};
 
-	const fadeConfig = {
-		"duration": 0.4,
-		"iterationCount": 1,
-		"delay": 0,
-		"fillMode": kony.anim.FILL_MODE_FORWARDS
-	};
-
 	return {
+		animConfig: {
+			"iterationCount": 1,
+			"delay": 0,
+			"fillMode": kony.anim.FILL_MODE_FORWARDS
+		},
+
 		keepRippleRatio: function(){
 			//TODO: Keep the ripple circular.
 			/*var maxPixels, maxDim;
@@ -95,7 +84,8 @@ define(function() {
 			//animate this.view.background.opacity = 1;
 			try{
 				var animation = kony.ui.createAnimation(backgroundSteps);
-				this.view.background.animate(animation, backgroundConfig, {
+				this.animConfig.duration = this._backgroundDuration;
+				this.view.background.animate(animation, this.animConfig, {
 					animationStart: doNothing,
 					animationEnd: doNothing
 				});
@@ -115,13 +105,14 @@ define(function() {
 			//animate the opacity of both effects back to 0.
 			try{
 				var animation = kony.ui.createAnimation(fadeSteps);
-				this.view.background.animate(animation, fadeConfig, {
+				this.animConfig.duration = this._fadeDuration;
+				this.view.background.animate(animation, this.animConfig, {
 					animationStart: doNothing,
 					animationEnd: () => {
 						this.hideBackground();
 					}
 				});
-				this.view.ripple.animate(animation, fadeConfig, {
+				this.view.ripple.animate(animation, this.animConfig, {
 					animationStart: doNothing,
 					animationEnd: () => {
 						this.hideRipple();
@@ -138,7 +129,8 @@ define(function() {
 			//animate this.view.ripple opacity to 1 and width and height to 100%
 			try{
 				var animation = kony.ui.createAnimation(rippleSteps);
-				this.view.ripple.animate(animation, rippleConfig, {
+				this.animConfig.duration = this._rippleDuration;
+				this.view.ripple.animate(animation, this.animConfig, {
 					animationStart: doNothing,
 					animationEnd: () => {
 						//If it's not released, then it's a long press, so don't fade backcround and ripple.
@@ -187,7 +179,23 @@ define(function() {
 		},
 		//Logic for getters/setters of custom properties
 		initGettersSetters: function() {
+			//Ripple animation duration.
+			defineGetter(this, "rippleDuration", () => {return this._rippleDuration;});
+			defineSetter(this, "rippleDuration", (rippleDuration) => {
+				this._rippleDuration = parseFloat(rippleDuration) || DEFAULT_RIPPLE_DURATION;
+			});
 
+			//Background animation duration.
+			defineGetter(this, "backgroundDuration", () => {return this._backgroundDuration;});
+			defineSetter(this, "backgroundDuration", (backgroundDuration) => {
+				this._backgroundDuration = parseFloat(backgroundDuration) || DEFAULT_BACKGROUND_DURATION;
+			});
+
+			//Fade animation duration.
+			defineGetter(this, "fadeDuration", () => {return this._fadeDuration;});
+			defineSetter(this, "fadeDuration", (fadeDuration) => {
+				this._fadeDuration = parseFloat(fadeDuration) || DEFAULT_FADE_DURATION;
+			});
 		}
 	};
 });

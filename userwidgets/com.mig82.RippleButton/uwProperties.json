@@ -15,12 +15,62 @@
             "properties": [
                 "Look & Feel",
                 "Ripple Effect",
-                "Background Effect"
+                "Background Effect",
+                "Fade Effect"
             ],
             "widgets": []
         },
         "properties": {
-            "custom": [],
+            "custom": [
+                {
+                    "access": "Write",
+                    "defaultValue": "0.4",
+                    "group": "Fade Effect",
+                    "kuid": "g5ed4197900e4257b026204c62f527da",
+                    "originalPropertyKey": "fadeDuration",
+                    "propertyIndex": 1,
+                    "propertyKey": "fadeDuration",
+                    "pw": {
+                        "displayName": "Duration",
+                        "uiRepresentation": "Label-Textbox"
+                    },
+                    "srcWgtKUID": "f1dc28506f7749b68cb0f82b0dfa3ee8",
+                    "type": "string",
+                    "value": ""
+                },
+                {
+                    "access": "Write",
+                    "defaultValue": "0.6",
+                    "group": "Ripple Effect",
+                    "kuid": "i030dce53ae043aa89a721781cf80e84",
+                    "originalPropertyKey": "rippleDuration",
+                    "propertyIndex": 5,
+                    "propertyKey": "rippleDuration",
+                    "pw": {
+                        "displayName": "Duration",
+                        "uiRepresentation": "Label-Textbox"
+                    },
+                    "srcWgtKUID": "f1dc28506f7749b68cb0f82b0dfa3ee8",
+                    "type": "string",
+                    "value": ""
+                },
+                {
+                    "access": "Write",
+                    "defaultValue": "0.5",
+                    "group": "Background Effect",
+                    "kuid": "g0121a95b7a34cb498334aeab3a9fb5c",
+                    "originalPropertyKey": "backgroundDuration",
+                    "propertyIndex": 5,
+                    "propertyKey": "backgroundDuration",
+                    "pw": {
+                        "displayName": "Duration",
+                        "uiRepresentation": "Label-Textbox"
+                    },
+                    "srcWgtKUID": "f1dc28506f7749b68cb0f82b0dfa3ee8",
+                    "type": "string",
+                    "value": ""
+                }
+            ],
             "passthrough": [
                 {
                     "access": "Enable",

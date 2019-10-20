@@ -40,7 +40,10 @@
     "clipbounds": true,
     "containerweight": 0,
     "data": {
+        "backgroundDuration": "1",
         "buttonNormalSkin": "sd2a15d9b69847a3a51dd89deba30468",
+        "fadeDuration": "1",
+        "rippleDuration": "1",
         "text": ""
     },
     "enablescrolling": true,
