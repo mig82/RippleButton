@@ -40,7 +40,32 @@
     "clipbounds": true,
     "containerweight": 0,
     "data": {
+        "backgroundHeight": {
+            "Default": {
+                "type": "string",
+                "value": "50dp"
+            }
+        },
+        "backgroundWidth": {
+            "Default": {
+                "type": "string",
+                "value": "50dp"
+            }
+        },
         "buttonNormalSkin": "s59b14dfab69403dad8e512745f0cfe6",
+        "rippleHeight": {
+            "Default": {
+                "type": "string",
+                "value": "50dp"
+            }
+        },
+        "rippleWidth": {
+            "Default": {
+                "type": "string",
+                "value": "50dp"
+            }
+        },
+        "showRipple": true,
         "text": ""
     },
     "enablescrolling": true,
@@ -49,7 +74,7 @@
     "iscustomlayout": false,
     "issegmentchild": false,
     "isvisible": true,
-    "kuid": "c861f6948d04407383248a6048337e80",
+    "kuid": "ca73b2c6c89748458a99a6b4437289b9",
     "layouttype": 2,
     "masterType": 1,
     "name": "kony.ui.UserWidgetInstance",

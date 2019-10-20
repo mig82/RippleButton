@@ -3,7 +3,7 @@
     "__parentReadjusting__": false,
     "_height_": {
         "type": "string",
-        "value": "100dp"
+        "value": "90dp"
     },
     "_margin_": [
         0,
@@ -22,7 +22,7 @@
     "_skin_": "s133a656535149a3a939ad02be7deed1",
     "_width_": {
         "type": "string",
-        "value": "100dp"
+        "value": "90dp"
     },
     "allboxes": [],
     "autogrowmode": 0,
@@ -36,17 +36,16 @@
         "value": "50%"
     },
     "children": [
-        "background",
         "ripple"
     ],
     "clipbounds": true,
     "containerweight": 100,
     "enablescrolling": true,
-    "id": "effectsFlex",
+    "id": "rippleFlex",
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "a0f90507d9a14e7bb9f20ea4b912ad26",
+    "kuid": "hb024b1fd6084a3a862f4459abd5253c",
     "layouttype": 2,
     "name": "kony.ui.FlexContainer",
     "parent": "RippleButton",

@@ -48,7 +48,7 @@
     "isvisible": true,
     "kuid": "b03cdfd1cbd941d6a771b446e47040d6",
     "name": "kony.ui.Image2",
-    "parent": "effectsFlex",
+    "parent": "backgroundFlex",
     "pf": "userwidgetmodel",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,

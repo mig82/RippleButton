@@ -1,9 +1,17 @@
 {
     "DNDConfig": null,
     "__parentReadjusting__": false,
+    "_bottom_": {
+        "type": "string",
+        "value": "120%"
+    },
     "_height_": {
         "type": "string",
-        "value": "50dp"
+        "value": "1dp"
+    },
+    "_left_": {
+        "type": "string",
+        "value": "0dp"
     },
     "_margin_": [
         0,
@@ -27,31 +35,18 @@
     "allboxes": [],
     "autogrowmode": 0,
     "canUpdateUI": true,
-    "centerx": {
-        "type": "string",
-        "value": "50%"
-    },
-    "centery": {
-        "type": "string",
-        "value": "50%"
-    },
-    "children": [
-        "button1",
-        "dummy100Dp",
-        "rippleFlex",
-        "backgroundFlex"
-    ],
+    "children": [],
     "clipbounds": true,
     "containerweight": 100,
     "enablescrolling": true,
-    "id": "RippleButton",
+    "id": "dummy100Dp",
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "f1dc28506f7749b68cb0f82b0dfa3ee8",
+    "kuid": "e1bbe98a8c2e4adaaa58c6a0a2dcc60e",
     "layouttype": 2,
     "name": "kony.ui.FlexContainer",
-    "parent": "userwidgetmodel",
+    "parent": "RippleButton",
     "pf": "userwidgetmodel",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
@@ -59,5 +54,6 @@
     "snapgridsize": 10,
     "snaptogrid": true,
     "wType": "FlexContainer",
-    "widgetalignment": 1
+    "widgetalignment": 1,
+    "zindex": 1
 }

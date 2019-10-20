@@ -5,7 +5,7 @@
     "_base64_": null,
     "_height_": {
         "type": "string",
-        "value": "90%"
+        "value": "100%"
     },
     "_margin_": [
         0,
@@ -23,7 +23,7 @@
     "_src_": "ripplebutton_ripple.png",
     "_width_": {
         "type": "string",
-        "value": "90%"
+        "value": "100%"
     },
     "canUpdateUI": true,
     "centerx": {
@@ -48,12 +48,12 @@
     "isvisible": true,
     "kuid": "i8d11e88b9704310b3c61be8288aef64",
     "name": "kony.ui.Image2",
-    "parent": "effectsFlex",
+    "parent": "rippleFlex",
     "pf": "userwidgetmodel",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
     "srcType": 1,
     "wType": "Image",
     "widgetalignment": 5,
-    "zindex": 1
+    "zindex": 2
 }

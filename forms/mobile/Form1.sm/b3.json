@@ -40,7 +40,32 @@
     "clipbounds": true,
     "containerweight": 0,
     "data": {
+        "backgroundHeight": {
+            "Default": {
+                "type": "string",
+                "value": "350dp"
+            }
+        },
+        "backgroundWidth": {
+            "Default": {
+                "type": "string",
+                "value": "350dp"
+            }
+        },
         "buttonNormalSkin": "s303bb0dd90d47c4a9e4c1396f9db558",
+        "rippleHeight": {
+            "Default": {
+                "type": "string",
+                "value": "350dp"
+            }
+        },
+        "rippleWidth": {
+            "Default": {
+                "type": "string",
+                "value": "350dp"
+            }
+        },
+        "showRipple": true,
         "text": " b3 20Dp left, 10% right"
     },
     "enablescrolling": true,

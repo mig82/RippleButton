@@ -58,17 +58,40 @@ define(function() {
 	};
 
 	return {
-		keepEffectsRatio: function(){
-			var l = this.view.width;
-			this.view.effectsFlex.width = l;
-			this.view.effectsFlex.height = l;
+		keepRippleRatio: function(){
+			//TODO: Keep the ripple circular.
+			/*var maxPixels, maxDim;
+			if(this.view.frame.width >= this.view.frame.height){
+				maxDim = this.view.width;
+				maxPixels = this.view.frame.width;
+			}
+			else{
+				maxDim = this.view.height;
+				maxPixels = this.view.frame.height;
+			}
+
+			//Make the effects (background and ripple) as large as the widget.
+			//this.view.effectsFlex.width = maxDim;
+			//this.view.effectsFlex.height = maxDim;
+
+			var pixelsPerDp = this.view.dummy100Dp.frame.width / 100;
+			if(this.view.width && /%$/.test(this.view.width)){
+				var DPs = maxPixels / pixelsPerDp + "dp";
+				//rippleSteps[100].height = DPs;
+				//this.view.effectsFlex.height = DPs;
+			}*/
+
+			//rippleSteps[100].width = this.view.ripple.width;
+			//rippleSteps[100].height = this.view.ripple.height;
+			//kony.print(`${this.view.id}\t Ripple Width: ${rippleSteps[100].width}\tHeight: ${rippleSteps[100].height}`);
+			//kony.print(`${this.view.id}\tmaxDim: ${maxDim}\tmaxPixels: ${maxPixels}`);
 		},
 
 		hideBackground: function(){
 			this.view.background.opacity = 0;
 		},
 
-		showBackground: function(){
+		showRippleBackground: function(){
 			//animate this.view.background.opacity = 1;
 			try{
 				var animation = kony.ui.createAnimation(backgroundSteps);
@@ -137,7 +160,7 @@ define(function() {
 		isReleased: true,
 
 		preShow: function(){
-			this.keepEffectsRatio();
+			this.keepRippleRatio();
 			this.hideBackground();
 			this.hideRipple();
 		},
@@ -147,7 +170,7 @@ define(function() {
 				if(!this.isClicked){
 					this.isClicked = true;
 					this.isReleased = false;
-					this.showBackground();
+					this.showRippleBackground();
 					this.growRipple();
 				}
 			};
