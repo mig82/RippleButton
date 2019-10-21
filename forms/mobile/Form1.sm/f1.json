@@ -43,26 +43,28 @@
         "backgroundHeight": {
             "Default": {
                 "type": "string",
-                "value": "50dp"
+                "value": "51dp"
             }
         },
+        "backgroundOpacity": "0.25",
         "backgroundWidth": {
             "Default": {
                 "type": "string",
-                "value": "50dp"
+                "value": "51dp"
             }
         },
         "buttonNormalSkin": "s59b14dfab69403dad8e512745f0cfe6",
         "rippleHeight": {
             "Default": {
                 "type": "string",
-                "value": "50dp"
+                "value": "51dp"
             }
         },
+        "rippleOpacity": "0.5",
         "rippleWidth": {
             "Default": {
                 "type": "string",
-                "value": "50dp"
+                "value": "51dp"
             }
         },
         "showRipple": true,

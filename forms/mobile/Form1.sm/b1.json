@@ -46,6 +46,7 @@
                 "value": "300dp"
             }
         },
+        "backgroundOpacity": "0.5",
         "backgroundWidth": {
             "Default": {
                 "type": "string",
@@ -59,6 +60,7 @@
                 "value": "300dp"
             }
         },
+        "rippleOpacity": "0.5",
         "rippleWidth": {
             "Default": {
                 "type": "string",

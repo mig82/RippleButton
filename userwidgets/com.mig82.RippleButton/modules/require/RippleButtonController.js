@@ -4,34 +4,12 @@ define(function() {
 
 	const MIN_RIPPLE_DIM = "5%";
 
-	const BACKGROUND_OPACITY = 0.25;
-	const RIPPLE_OPACITY = 0.25;
+	const DEFAULT_BACKGROUND_OPACITY = 0.25;
+	const DEFAULT_RIPPLE_OPACITY = 0.25;
 
 	const DEFAULT_RIPPLE_DURATION = 0.6;
 	const DEFAULT_BACKGROUND_DURATION = 0.5;
 	const DEFAULT_FADE_DURATION = 0.4;
-
-	const rippleSteps = {
-		0: {
-			width: MIN_RIPPLE_DIM,
-			height: MIN_RIPPLE_DIM,
-			opacity: RIPPLE_OPACITY,
-			stepConfig: {timingFunction: kony.anim.LINEAR}
-		},
-		100: {
-			width: "100%",
-			height: "100%",
-			opacity: RIPPLE_OPACITY,
-			stepConfig: {timingFunction: kony.anim.EASE_OUT}
-		}
-	};
-
-	const backgroundSteps = {
-		100: {
-			opacity: BACKGROUND_OPACITY,
-			stepConfig: {timingFunction: kony.anim.EASE_OUT}
-		}
-	};
 
 	const fadeSteps = {
 		100: {
@@ -41,6 +19,28 @@ define(function() {
 	};
 
 	return {
+		rippleSteps: {
+			0: {
+				width: MIN_RIPPLE_DIM,
+				height: MIN_RIPPLE_DIM,
+				opacity: DEFAULT_RIPPLE_OPACITY,
+				stepConfig: {timingFunction: kony.anim.LINEAR}
+			},
+			100: {
+				width: "100%",
+				height: "100%",
+				opacity: DEFAULT_RIPPLE_OPACITY,
+				stepConfig: {timingFunction: kony.anim.EASE_OUT}
+			}
+		},
+
+		backgroundSteps: {
+			100: {
+				opacity: DEFAULT_BACKGROUND_OPACITY,
+				stepConfig: {timingFunction: kony.anim.EASE_OUT}
+			}
+		},
+
 		animConfig: {
 			"iterationCount": 1,
 			"delay": 0,
@@ -83,7 +83,8 @@ define(function() {
 		showRippleBackground: function(){
 			//animate this.view.background.opacity = 1;
 			try{
-				var animation = kony.ui.createAnimation(backgroundSteps);
+				this.backgroundSteps[100].opacity = this._backgroundOpacity;
+				var animation = kony.ui.createAnimation(this.backgroundSteps);
 				this.animConfig.duration = this._backgroundDuration;
 				this.view.background.animate(animation, this.animConfig, {
 					animationStart: doNothing,
@@ -128,7 +129,8 @@ define(function() {
 		growRipple: function(){
 			//animate this.view.ripple opacity to 1 and width and height to 100%
 			try{
-				var animation = kony.ui.createAnimation(rippleSteps);
+				this.rippleSteps[0].opacity = this.rippleSteps[100].opacity = this._rippleOpacity;
+				var animation = kony.ui.createAnimation(this.rippleSteps);
 				this.animConfig.duration = this._rippleDuration;
 				this.view.ripple.animate(animation, this.animConfig, {
 					animationStart: doNothing,
@@ -195,6 +197,18 @@ define(function() {
 			defineGetter(this, "fadeDuration", () => {return this._fadeDuration;});
 			defineSetter(this, "fadeDuration", (fadeDuration) => {
 				this._fadeDuration = parseFloat(fadeDuration) || DEFAULT_FADE_DURATION;
+			});
+
+			//Ripple opacity.
+			defineGetter(this, "rippleOpacity", () => {return this._rippleOpacity;});
+			defineSetter(this, "rippleOpacity", (rippleOpacity) => {
+				this._rippleOpacity = parseFloat(rippleOpacity) || DEFAULT_RIPPLE_OPACITY;
+			});
+
+			//Background opacity.
+			defineGetter(this, "backgroundOpacity", () => {return this._backgroundOpacity;});
+			defineSetter(this, "backgroundOpacity", (backgroundOpacity) => {
+				this._backgroundOpacity = parseFloat(backgroundOpacity) || DEFAULT_BACKGROUND_OPACITY;
 			});
 		}
 	};

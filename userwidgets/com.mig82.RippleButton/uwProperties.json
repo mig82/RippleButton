@@ -26,7 +26,7 @@
                     "access": "Write",
                     "defaultValue": "0.4",
                     "group": "Fade Effect",
-                    "kuid": "g5ed4197900e4257b026204c62f527da",
+                    "kuid": "b914e206dcbb4f39b40184cda2772be0",
                     "originalPropertyKey": "fadeDuration",
                     "propertyIndex": 1,
                     "propertyKey": "fadeDuration",
@@ -42,7 +42,7 @@
                     "access": "Write",
                     "defaultValue": "0.6",
                     "group": "Ripple Effect",
-                    "kuid": "i030dce53ae043aa89a721781cf80e84",
+                    "kuid": "f63a86483cd648948e22ad30db69098b",
                     "originalPropertyKey": "rippleDuration",
                     "propertyIndex": 5,
                     "propertyKey": "rippleDuration",
@@ -58,12 +58,44 @@
                     "access": "Write",
                     "defaultValue": "0.5",
                     "group": "Background Effect",
-                    "kuid": "g0121a95b7a34cb498334aeab3a9fb5c",
+                    "kuid": "j47c4aeba10f42e88612f044dfdf6f89",
                     "originalPropertyKey": "backgroundDuration",
                     "propertyIndex": 5,
                     "propertyKey": "backgroundDuration",
                     "pw": {
                         "displayName": "Duration",
+                        "uiRepresentation": "Label-Textbox"
+                    },
+                    "srcWgtKUID": "f1dc28506f7749b68cb0f82b0dfa3ee8",
+                    "type": "string",
+                    "value": ""
+                },
+                {
+                    "access": "Write",
+                    "defaultValue": "0.25",
+                    "group": "Background Effect",
+                    "kuid": "e56944aeeaec4397a341717cadd6a7ae",
+                    "originalPropertyKey": "backgroundOpacity",
+                    "propertyIndex": 6,
+                    "propertyKey": "backgroundOpacity",
+                    "pw": {
+                        "displayName": "Opacity",
+                        "uiRepresentation": "Label-Textbox"
+                    },
+                    "srcWgtKUID": "f1dc28506f7749b68cb0f82b0dfa3ee8",
+                    "type": "string",
+                    "value": ""
+                },
+                {
+                    "access": "Write",
+                    "defaultValue": "0.25",
+                    "group": "Ripple Effect",
+                    "kuid": "a2ac6dfdcd424adaa956965de5aa73b1",
+                    "originalPropertyKey": "rippleOpacity",
+                    "propertyIndex": 6,
+                    "propertyKey": "rippleOpacity",
+                    "pw": {
+                        "displayName": "Opacity",
                         "uiRepresentation": "Label-Textbox"
                     },
                     "srcWgtKUID": "f1dc28506f7749b68cb0f82b0dfa3ee8",
