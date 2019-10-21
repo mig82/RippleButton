@@ -176,6 +176,14 @@ define(function() {
 		},
 
 		constructor: function(/*baseConfig, layoutConfig, pspConfig*/) {
+			/*Make the ripple and background visible again in case
+			the developer made them invisible at design time.*/
+			this.view.rippleFlex.isVisible = true;
+			this.view.backgroundFlex.isVisible = true;
+
+			/*Make the focus skin the same as the normal one. The idea
+			is to avoid a double effect of ripple and focus skin*/
+			this.view.button1.focusSkin = this.view.button1.skin;
 			this.view.preShow = this.preShow;
 			this.view.postShow = this.postShow;
 		},

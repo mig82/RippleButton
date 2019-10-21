@@ -26,7 +26,7 @@
                     "access": "Write",
                     "defaultValue": "0.4",
                     "group": "Fade Effect",
-                    "kuid": "b914e206dcbb4f39b40184cda2772be0",
+                    "kuid": "e104c02dfcaa4051a50d84fbac17e843",
                     "originalPropertyKey": "fadeDuration",
                     "propertyIndex": 1,
                     "propertyKey": "fadeDuration",
@@ -42,7 +42,7 @@
                     "access": "Write",
                     "defaultValue": "0.6",
                     "group": "Ripple Effect",
-                    "kuid": "f63a86483cd648948e22ad30db69098b",
+                    "kuid": "ec4a10de410f4a7eb633709f093272d4",
                     "originalPropertyKey": "rippleDuration",
                     "propertyIndex": 5,
                     "propertyKey": "rippleDuration",
@@ -58,7 +58,7 @@
                     "access": "Write",
                     "defaultValue": "0.5",
                     "group": "Background Effect",
-                    "kuid": "j47c4aeba10f42e88612f044dfdf6f89",
+                    "kuid": "d3aa43a7636b487aa549762aa2a7d423",
                     "originalPropertyKey": "backgroundDuration",
                     "propertyIndex": 5,
                     "propertyKey": "backgroundDuration",
@@ -74,7 +74,7 @@
                     "access": "Write",
                     "defaultValue": "0.25",
                     "group": "Background Effect",
-                    "kuid": "e56944aeeaec4397a341717cadd6a7ae",
+                    "kuid": "ida935a1909d422da00eeb69b490894e",
                     "originalPropertyKey": "backgroundOpacity",
                     "propertyIndex": 6,
                     "propertyKey": "backgroundOpacity",
@@ -90,7 +90,7 @@
                     "access": "Write",
                     "defaultValue": "0.25",
                     "group": "Ripple Effect",
-                    "kuid": "a2ac6dfdcd424adaa956965de5aa73b1",
+                    "kuid": "he39a25482bc4918b7c06db72d6c657d",
                     "originalPropertyKey": "rippleOpacity",
                     "propertyIndex": 6,
                     "propertyKey": "rippleOpacity",
@@ -343,23 +343,6 @@
                         "wType": "FlexContainer"
                     },
                     "srcWgtKUID": "a0290c2be6694d1e81666910820c4a6a"
-                },
-                {
-                    "access": "Enable",
-                    "group": "Look & Feel",
-                    "kuid": "f6b88fce32a14eae9a572e92dafa4cbd",
-                    "originalPropertyKey": "focusSkin",
-                    "propertyIndex": 3,
-                    "propertyKey": "buttonFocusSkin",
-                    "pw": {
-                        "access": "readwrite",
-                        "category": "skin",
-                        "dependentKeysKUIDs": null,
-                        "displayName": "Button Focus Skin",
-                        "srcWidget": "button1",
-                        "wType": "Button"
-                    },
-                    "srcWgtKUID": "dc9c874b04924cef9adfe07235ff4fdd"
                 },
                 {
                     "access": "Enable",

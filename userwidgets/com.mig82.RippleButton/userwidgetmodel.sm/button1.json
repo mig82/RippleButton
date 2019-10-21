@@ -36,7 +36,7 @@
     "containerweight": 100,
     "contentalignment": 5,
     "displaytext": true,
-    "focusskin": "s303bb0dd90d47c4a9e4c1396f9db558",
+    "focusskin": null,
     "id": "button1",
     "info": null,
     "iscustomlayout": false,

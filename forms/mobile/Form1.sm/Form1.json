@@ -30,11 +30,13 @@
     },
     "canUpdateUI": true,
     "children": [
-        "m1",
         "b1",
         "b2",
         "b3",
-        "f1"
+        "f1",
+        "m1",
+        "m2",
+        "m3"
     ],
     "containerweight": 100,
     "controllerInfo": {

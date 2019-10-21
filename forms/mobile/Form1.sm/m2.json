@@ -11,10 +11,6 @@
         "type": "string",
         "value": "50dp"
     },
-    "_left_": {
-        "type": "string",
-        "value": "5dp"
-    },
     "_margin_": [
         0,
         0,
@@ -37,20 +33,24 @@
     },
     "autogrowmode": 0,
     "canUpdateUI": true,
+    "centerx": {
+        "type": "string",
+        "value": "50%"
+    },
     "clipbounds": true,
     "containerweight": 0,
     "data": {
-        "showBackground": true,
-        "showRipple": true,
-        "text": ""
+        "buttonNormalSkin": "sda47186cf974f5ebef2dbf03b9da9a1",
+        "showBackground": false,
+        "showRipple": false
     },
     "enablescrolling": true,
-    "id": "m1",
+    "id": "m2",
     "info": null,
     "iscustomlayout": false,
     "issegmentchild": false,
     "isvisible": true,
-    "kuid": "bde489daf8b643a0b28235ff7ad20a99",
+    "kuid": "cdb74351ae48423e84d0e92947a52c2b",
     "layouttype": 2,
     "masterType": 1,
     "name": "kony.ui.UserWidgetInstance",
