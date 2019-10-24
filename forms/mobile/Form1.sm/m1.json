@@ -40,6 +40,19 @@
     "clipbounds": true,
     "containerweight": 0,
     "data": {
+        "rippleDuration": "0.2",
+        "rippleHeight": {
+            "Default": {
+                "type": "string",
+                "value": "100dp"
+            }
+        },
+        "rippleWidth": {
+            "Default": {
+                "type": "string",
+                "value": "100dp"
+            }
+        },
         "showBackground": true,
         "showRipple": true,
         "text": ""

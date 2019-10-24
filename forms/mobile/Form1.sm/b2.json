@@ -55,7 +55,7 @@
         },
         "buttonNormalSkin": "s303bb0dd90d47c4a9e4c1396f9db558",
         "fadeDuration": "0.4",
-        "rippleDuration": "0.6",
+        "rippleDuration": "0.2",
         "rippleHeight": {
             "Default": {
                 "type": "string",
