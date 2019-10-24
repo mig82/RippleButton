@@ -122,11 +122,10 @@ define(function() {
 						/*TODO: All of the below should be done at the end of the longest
 						fade animation. Not at the end of the ripple fade always.*/
 						this.hideRipple();
-						//Allow the button to be pressed again.
-						this.isClicked = false;
 						//Reset the values used for long-press detection.
 						delete this.duration;
 						delete this.start;
+						this.isFired = false;
 					}
 				});
 			}
@@ -136,7 +135,7 @@ define(function() {
 		},
 
 		growRipple: function(){
-			//animate this.view.ripple opacity to 1 and width and height to 100%
+
 			try{
 				this.rippleSteps[0].opacity = this.rippleSteps[100].opacity = this._rippleOpacity;
 				var animation = kony.ui.createAnimation(this.rippleSteps);
@@ -147,10 +146,11 @@ define(function() {
 				this.view.ripple.animate(animation, this.animConfig, {
 					animationStart: doNothing,
 					animationEnd: () => {
-						//If it's not released, then it's a long press, so don't fade backcround and ripple.
-						if(!this.isReleased) this.isClicked = false;
-						//If it is released, then it was a brief press, so fade background and ripple.
-						else this.fadeEffects();
+						//Allow the button to be pressed again.
+						this.isClicked = false;
+						/*If it is released, then it was a brief press, so fade background and ripple.
+						If it's not released, then it's a long press, so don't fade backcround and ripple.*/
+						if(this.isReleased) this.fadeEffects();
 					}
 				});
 			}
