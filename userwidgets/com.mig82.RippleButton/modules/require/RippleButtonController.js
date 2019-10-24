@@ -2,14 +2,17 @@ define(function() {
 
 	const doNothing = ()=>{};
 
+	const LONG_PRESS_DETECTION_WINDOW = 0.2; //Seconds
+
 	const MIN_RIPPLE_DIM = "5%";
 
 	const DEFAULT_BACKGROUND_OPACITY = 0.25;
 	const DEFAULT_RIPPLE_OPACITY = 0.25;
 
-	const DEFAULT_RIPPLE_DURATION = 0.6;
-	const DEFAULT_BACKGROUND_DURATION = 0.5;
-	const DEFAULT_FADE_DURATION = 0.4;
+	const DEFAULT_RIPPLE_DURATION = 0.6; //Seconds
+	const DEFAULT_LONG_RIPPLE_DURATION = 2; //Seconds
+	const DEFAULT_BACKGROUND_DURATION = 0.5; //Seconds
+	const DEFAULT_FADE_DURATION = 0.4; //Seconds
 
 	const fadeSteps = {
 		100: {
@@ -116,8 +119,14 @@ define(function() {
 				this.view.ripple.animate(animation, this.animConfig, {
 					animationStart: doNothing,
 					animationEnd: () => {
+						/*TODO: All of the below should be done at the end of the longest
+						fade animation. Not at the end of the ripple fade always.*/
 						this.hideRipple();
+						//Allow the button to be pressed again.
 						this.isClicked = false;
+						//Reset the values used for long-press detection.
+						delete this.duration;
+						delete this.start;
 					}
 				});
 			}
@@ -131,7 +140,10 @@ define(function() {
 			try{
 				this.rippleSteps[0].opacity = this.rippleSteps[100].opacity = this._rippleOpacity;
 				var animation = kony.ui.createAnimation(this.rippleSteps);
-				this.animConfig.duration = this._rippleDuration;
+
+				//Use the normal or long press duration depending on the case.
+				this.animConfig.duration = this.isLongPress?this._longRippleDuration:this._rippleDuration;
+
 				this.view.ripple.animate(animation, this.animConfig, {
 					animationStart: doNothing,
 					animationEnd: () => {
@@ -162,14 +174,34 @@ define(function() {
 		postShow: function(){
 			this.view.button1.onTouchStart = () => {
 				if(!this.isClicked){
+					//Avoid double click.
 					this.isClicked = true;
+
+					//Avoid fading effects right away if it's a long press.
 					this.isReleased = false;
-					this.showRippleBackground();
-					this.growRipple();
+
+					//Start calculating the duration of the click.
+					this.start = Date.now();
+
+					//Give ourselves time to detect whether it's a quick or long press.
+					kony.timer.schedule(`${this.view.id}`, () => {
+						//If there is no duration calculated yet or if it's longer than the window, then it's a long press.
+						if(!this.duration || this.duration > LONG_PRESS_DETECTION_WINDOW * 1000){
+							this.isLongPress = true;
+						}
+						else{
+							this.isLongPress = false;
+						}
+						this.showRippleBackground();
+						this.growRipple();
+					}, LONG_PRESS_DETECTION_WINDOW, false);
 				}
 			};
 			this.view.button1.onTouchEnd = () => {
+				//Calculate duration to detect long-press.
+				this.duration = Date.now() - this.start;
 				this.isReleased = true;
+
 				//If the button is released after a long press, fade background and ripple.
 				if(!this.isClicked)this.fadeEffects();
 			};
@@ -193,6 +225,12 @@ define(function() {
 			defineGetter(this, "rippleDuration", () => {return this._rippleDuration;});
 			defineSetter(this, "rippleDuration", (rippleDuration) => {
 				this._rippleDuration = parseFloat(rippleDuration) || DEFAULT_RIPPLE_DURATION;
+			});
+
+			//Ripple animation duration.
+			defineGetter(this, "longRippleDuration", () => {return this._longRippleDuration;});
+			defineSetter(this, "longRippleDuration", (longRippleDuration) => {
+				this._longRippleDuration = parseFloat(longRippleDuration) || DEFAULT_LONG_RIPPLE_DURATION;
 			});
 
 			//Background animation duration.

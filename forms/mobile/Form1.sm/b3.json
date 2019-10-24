@@ -53,7 +53,7 @@
             }
         },
         "buttonNormalSkin": "s303bb0dd90d47c4a9e4c1396f9db558",
-        "rippleDuration": "1",
+        "rippleDuration": "0.6",
         "rippleHeight": {
             "Default": {
                 "type": "string",
