@@ -41,6 +41,18 @@
     "containerweight": 0,
     "data": {
         "buttonNormalSkin": "sda47186cf974f5ebef2dbf03b9da9a1",
+        "rippleHeight": {
+            "Default": {
+                "type": "string",
+                "value": "100dp"
+            }
+        },
+        "rippleWidth": {
+            "Default": {
+                "type": "string",
+                "value": "100dp"
+            }
+        },
         "showBackground": false,
         "showRipple": false
     },
