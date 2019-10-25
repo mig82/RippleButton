@@ -5,7 +5,7 @@
     "_children_": [],
     "_height_": {
         "type": "string",
-        "value": "50dp"
+        "value": "200dp"
     },
     "_margin_": [
         0,
@@ -33,7 +33,7 @@
     },
     "_width_": {
         "type": "string",
-        "value": "50dp"
+        "value": "200dp"
     },
     "autogrowmode": 0,
     "canUpdateUI": true,
@@ -43,14 +43,14 @@
         "backgroundHeight": {
             "Default": {
                 "type": "string",
-                "value": "51dp"
+                "value": "200dp"
             }
         },
-        "backgroundOpacity": "0.25",
+        "backgroundOpacity": "0",
         "backgroundWidth": {
             "Default": {
                 "type": "string",
-                "value": "51dp"
+                "value": "200dp"
             }
         },
         "buttonNormalSkin": "s59b14dfab69403dad8e512745f0cfe6",
@@ -59,14 +59,14 @@
         "rippleHeight": {
             "Default": {
                 "type": "string",
-                "value": "51dp"
+                "value": "200dp"
             }
         },
-        "rippleOpacity": "0.5",
+        "rippleOpacity": "0.8",
         "rippleWidth": {
             "Default": {
                 "type": "string",
-                "value": "51dp"
+                "value": "200dp"
             }
         },
         "showRipple": true,

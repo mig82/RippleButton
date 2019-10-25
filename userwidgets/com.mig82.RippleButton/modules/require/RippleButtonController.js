@@ -4,7 +4,7 @@ define(function() {
 
 	const LONG_PRESS_DETECTION_WINDOW = 0.2; //Seconds
 
-	const MIN_RIPPLE_DIM = "5%";
+	const MIN_RIPPLE_DIM = "0%";
 
 	const DEFAULT_BACKGROUND_OPACITY = 0.25;
 	const DEFAULT_RIPPLE_OPACITY = 0.25;
@@ -151,7 +151,14 @@ define(function() {
 		growRipple: function(){
 
 			try{
+				//Place the ripple where the user touched.
+				this.rippleSteps[0].centerX = this.rippleCenterStartX;
+				this.rippleSteps[0].centerY = this.rippleCenterStartY;
+				//Set the target position of the animation to the center.
+				this.rippleSteps[100].centerX = this.rippleSteps[100].centerY = "50%";
+				//Set the opacity of the ripple.
 				this.rippleSteps[0].opacity = this.rippleSteps[100].opacity = this._rippleOpacity;
+				//Create the animation object.
 				var animation = kony.ui.createAnimation(this.rippleSteps);
 
 				//Use the normal or long press duration depending on the case.
@@ -204,13 +211,18 @@ define(function() {
 			this.hideBackground();
 		},
 
+		placeRipple: function(x, y){
+			this.rippleCenterStartX = `${x}dp`;
+			this.rippleCenterStartY = `${y}dp`;
+		},
+
 		preShow: function(){
 			this.keepRippleRatio();
 			this.hideEffects();
 		},
 
 		postShow: function(){
-			this.view.button1.onTouchStart = () => {
+			this.view.button1.onTouchStart = (button, x, y) => {
 				if(!this.isClicked){
 					//Avoid double click.
 					this.isClicked = true;
@@ -220,6 +232,9 @@ define(function() {
 
 					//Start calculating the duration of the click.
 					this.start = Date.now();
+
+					//Place the ripple where the user's finger touched.
+					this.placeRipple(x, y);
 
 					//Give ourselves time to detect whether it's a quick or long press.
 					this.animTimerId = `RippleButton.${this.view.id}.${this.start}`;
