@@ -11,7 +11,10 @@ define(function() {
 
 	const DEFAULT_RIPPLE_DURATION = 0.6; //Seconds
 	const DEFAULT_LONG_RIPPLE_DURATION = 1.5; //Seconds
+
 	const DEFAULT_BACKGROUND_DURATION = 0.5; //Seconds
+	const DEFAULT_LONG_BACKGROUND_DURATION = 1.5; //Seconds
+
 	const DEFAULT_FADE_DURATION = 0.4; //Seconds
 
 	const fadeSteps = {
@@ -88,7 +91,7 @@ define(function() {
 			try{
 				this.backgroundSteps[100].opacity = this._backgroundOpacity;
 				var animation = kony.ui.createAnimation(this.backgroundSteps);
-				this.animConfig.duration = this._backgroundDuration;
+				this.animConfig.duration = this.isLongPress?this._longBackgroundDuration:this._backgroundDuration;
 				this.view.background.animate(animation, this.animConfig, {
 					animationStart: doNothing,
 					animationEnd: this.fadeBackground
@@ -279,6 +282,12 @@ define(function() {
 			defineGetter(this, "backgroundDuration", () => {return this._backgroundDuration;});
 			defineSetter(this, "backgroundDuration", (backgroundDuration) => {
 				this._backgroundDuration = parseFloat(backgroundDuration) || DEFAULT_BACKGROUND_DURATION;
+			});
+
+			//Long background animation duration.
+			defineGetter(this, "longBackgroundDuration", () => {return this._longBackgroundDuration;});
+			defineSetter(this, "longBackgroundDuration", (longBackgroundDuration) => {
+				this._longBackgroundDuration = parseFloat(longBackgroundDuration) || DEFAULT_LONG_BACKGROUND_DURATION;
 			});
 
 			//Fade animation duration.
