@@ -56,7 +56,7 @@
                 },
                 {
                     "access": "Write",
-                    "defaultValue": "0.5",
+                    "defaultValue": "0.2",
                     "group": "Background Effect",
                     "kuid": "ic2e9e7a5db44170b86acdf6ece915e9",
                     "originalPropertyKey": "backgroundDuration",

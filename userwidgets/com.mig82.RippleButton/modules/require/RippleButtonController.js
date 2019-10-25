@@ -91,7 +91,7 @@ define(function() {
 				this.animConfig.duration = this._backgroundDuration;
 				this.view.background.animate(animation, this.animConfig, {
 					animationStart: doNothing,
-					animationEnd: doNothing
+					animationEnd: this.fadeBackground
 				});
 			}
 			catch(e){
@@ -105,7 +105,7 @@ define(function() {
 			this.view.ripple.height = MIN_RIPPLE_DIM;
 		},
 
-		fadeEffects: function(){
+		fadeBackground: function(){
 			//animate the opacity of both effects back to 0.
 			try{
 				var animation = kony.ui.createAnimation(fadeSteps);
@@ -116,6 +116,17 @@ define(function() {
 						this.hideBackground();
 					}
 				});
+			}
+			catch(e){
+				kony.print(`RippleButton: ${this.view.id} error fading background away:\n\t${e}`);
+			}
+		},
+
+		fadeRipple: function(){
+			//animate the opacity of both effects back to 0.
+			try{
+				var animation = kony.ui.createAnimation(fadeSteps);
+				this.animConfig.duration = this._fadeDuration;
 				this.view.ripple.animate(animation, this.animConfig, {
 					animationStart: doNothing,
 					animationEnd: () => {
@@ -130,7 +141,7 @@ define(function() {
 				});
 			}
 			catch(e){
-				kony.print(`RippleButton: error fading effects away:\n\t${e}`);
+				kony.print(`RippleButton: ${this.view.id} error fading ripple away:\n\t${e}`);
 			}
 		},
 
@@ -150,7 +161,7 @@ define(function() {
 						this.isClicked = false;
 						/*If it is released, then it was a brief press, so fade background and ripple.
 						If it's not released, then it's a long press, so don't fade backcround and ripple.*/
-						if(this.isReleased) this.fadeEffects();
+						if(this.isReleased) this.fadeRipple();
 					}
 				});
 			}
@@ -229,10 +240,11 @@ define(function() {
 				//Long press
 				else{
 					/*If the button is not clicked by the time it's released, it means
-					the ripple and background animations have finished already, so the
-					button is being released after a long press, and we should fade the
+					the button is being released after a long press, and the ripple and
+					background animations have likely finished already, so we fade the
 					background and ripple.*/
-					this.fadeEffects();
+					this.fadeRipple();
+					this.fadeBackground();
 				}
 			};
 		},

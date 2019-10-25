@@ -40,7 +40,7 @@
     "clipbounds": true,
     "containerweight": 0,
     "data": {
-        "backgroundDuration": "0.5",
+        "backgroundDuration": "0.2",
         "backgroundHeight": {
             "Default": {
                 "type": "string",
