@@ -38,7 +38,7 @@
     "children": [
         "ripple"
     ],
-    "clipbounds": true,
+    "clipbounds": false,
     "containerweight": 100,
     "enablescrolling": true,
     "id": "rippleFlex",

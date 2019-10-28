@@ -212,8 +212,35 @@ define(function() {
 		},
 
 		placeRipple: function(x, y){
-			this.rippleCenterStartX = `${x}dp`;
-			this.rippleCenterStartY = `${y}dp`;
+			kony.print(`RippleButton touchX: ${x}, touchY: ${y}`);
+
+			var offset = this.view.rippleFlex.convertPointFromWidget({
+				x: "0dp",
+				y: "0dp"
+			}, this.view.button1);
+
+			//In iOS, x and y are numbers —e.g -75. In Web, they're strings —e.g. "-75px".
+			var offsetX, offsetY;
+			//iOS
+			if(typeof offset.x === "number"){
+				offsetX = offset.x;
+				offsetY = offset.y;
+			}
+			//Web
+			else if(typeof offset.x === "string"){
+				offsetX = parseFloat(offset.x.replace(/px$/, ""));
+				offsetY = parseFloat(offset.y.replace(/px$/, ""));
+			}
+			//Android
+			else {//if(typeof offset.x === "object"){
+				//TODO: This case where offset.x and offset.y are empty objects is an Android bug.
+			}
+			//this.view.button1.text = `type: ${typeof offsetX}, offsetX: ${offsetX}, offsetY: ${offsetY}`;
+			kony.print(`RippleButton offsetX: ${offsetX}, offsetY: ${offsetY}`);
+
+			this.rippleCenterStartX = `${offsetX + x}dp`;
+			this.rippleCenterStartY = `${offsetY + y}dp`;
+			kony.print(`RippleButton rippleX: ${this.rippleCenterStartX}, rippleY: ${this.rippleCenterStartY}`);
 		},
 
 		preShow: function(){
