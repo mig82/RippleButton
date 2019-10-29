@@ -11,10 +11,6 @@
         "type": "string",
         "value": "50dp"
     },
-    "_left_": {
-        "type": "string",
-        "value": "20dp"
-    },
     "_margin_": [
         0,
         0,
@@ -37,6 +33,10 @@
     "_skin_": "s089d55edda4402fbcb5be64fb50d423",
     "autogrowmode": 0,
     "canUpdateUI": true,
+    "centerx": {
+        "type": "string",
+        "value": "50%"
+    },
     "clipbounds": true,
     "containerweight": 0,
     "data": {
@@ -67,7 +67,7 @@
             }
         },
         "showRipple": true,
-        "text": "Go to next"
+        "text": "Go back"
     },
     "enablescrolling": true,
     "id": "b3",
@@ -75,12 +75,12 @@
     "iscustomlayout": false,
     "issegmentchild": false,
     "isvisible": true,
-    "kuid": "bbd1abaa4c754a789e4d30974aabb88a",
+    "kuid": "c6c7dd9a5638423988fbab90c0eaf6bd",
     "layouttype": 2,
     "masterType": 1,
     "name": "kony.ui.UserWidgetInstance",
-    "parent": "Form1",
-    "pf": "Form1",
+    "parent": "Form2",
+    "pf": "Form2",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
     "retainflowhorizontalalignment": false,

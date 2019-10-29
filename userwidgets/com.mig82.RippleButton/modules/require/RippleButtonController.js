@@ -148,6 +148,12 @@ define(function() {
 			}
 		},
 
+		invokeOnPressed: function(){
+			if(typeof this.onPressed === "function"){
+				this.onPressed();
+			}
+		},
+
 		growRipple: function(){
 
 			try{
@@ -172,6 +178,9 @@ define(function() {
 						/*If it is released, then it was a brief press, so fade background and ripple.
 						If it's not released, then it's a long press, so don't fade backcround and ripple.*/
 						if(this.isReleased) this.fadeRipple();
+
+						//Invoke the custom event set by the developer.
+						this.invokeOnPressed();
 					}
 				});
 			}
@@ -226,6 +235,9 @@ define(function() {
 		preShow: function(){
 			this.keepRippleRatio();
 			this.hideEffects();
+			this.isClicked = false;
+			this.isReleased = true;
+			this.isFired = false;
 		},
 
 		postShow: function(){

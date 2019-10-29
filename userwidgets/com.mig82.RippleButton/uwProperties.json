@@ -6,7 +6,21 @@
             "passthrough": []
         },
         "events": {
-            "custom": [],
+            "custom": [
+                {
+                    "group": "General",
+                    "kuid": "cc58328de3cf47ce9f751c192d96ee17",
+                    "paramList": [],
+                    "propertyIndex": 2,
+                    "propertyKey": "onPressed",
+                    "pw": {
+                        "displayName": "onPressed",
+                        "uiRepresentation": "Label-Label-Button-Button"
+                    },
+                    "srcWgtKUID": "f1dc28506f7749b68cb0f82b0dfa3ee8",
+                    "type": "event"
+                }
+            ],
             "passthrough": []
         },
         "groups": {
