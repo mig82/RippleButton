@@ -19,7 +19,8 @@ Here are some examples of what this looks like:
 
 ## Implementation Notes
 
-This project was built using Kony Quantum 8.4.43.
+* This project was built using Kony Quantum 8.4.43.
+* I've tried and tested this component in Android native, iOS native and Web applications.
 
 ## Other Considerations
 
