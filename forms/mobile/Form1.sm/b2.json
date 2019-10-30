@@ -40,7 +40,7 @@
     "clipbounds": true,
     "containerweight": 0,
     "data": {
-        "backgroundDuration": "0.5",
+        "backgroundDuration": "0.2",
         "backgroundHeight": {
             "Default": {
                 "type": "string",
@@ -55,7 +55,7 @@
         },
         "buttonNormalSkin": "s303bb0dd90d47c4a9e4c1396f9db558",
         "fadeDuration": "0.4",
-        "rippleDuration": "0.6",
+        "rippleDuration": "0.2",
         "rippleHeight": {
             "Default": {
                 "type": "string",
@@ -69,7 +69,7 @@
             }
         },
         "showRipple": true,
-        "text": " b2 300Dp x 50Dp"
+        "text": ""
     },
     "enablescrolling": true,
     "id": "b2",

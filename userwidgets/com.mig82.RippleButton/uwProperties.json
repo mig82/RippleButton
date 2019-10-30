@@ -6,7 +6,21 @@
             "passthrough": []
         },
         "events": {
-            "custom": [],
+            "custom": [
+                {
+                    "group": "General",
+                    "kuid": "cc58328de3cf47ce9f751c192d96ee17",
+                    "paramList": [],
+                    "propertyIndex": 2,
+                    "propertyKey": "onPressed",
+                    "pw": {
+                        "displayName": "onPressed",
+                        "uiRepresentation": "Label-Label-Button-Button"
+                    },
+                    "srcWgtKUID": "f1dc28506f7749b68cb0f82b0dfa3ee8",
+                    "type": "event"
+                }
+            ],
             "passthrough": []
         },
         "groups": {
@@ -26,7 +40,7 @@
                     "access": "Write",
                     "defaultValue": "0.4",
                     "group": "Fade Effect",
-                    "kuid": "g5ed4197900e4257b026204c62f527da",
+                    "kuid": "b3e2366c49e549398a0d24a08369a894",
                     "originalPropertyKey": "fadeDuration",
                     "propertyIndex": 1,
                     "propertyKey": "fadeDuration",
@@ -40,9 +54,9 @@
                 },
                 {
                     "access": "Write",
-                    "defaultValue": "0.6",
+                    "defaultValue": "0.2",
                     "group": "Ripple Effect",
-                    "kuid": "i030dce53ae043aa89a721781cf80e84",
+                    "kuid": "fb3ec65d65b14240a079f57fb9cb2c69",
                     "originalPropertyKey": "rippleDuration",
                     "propertyIndex": 5,
                     "propertyKey": "rippleDuration",
@@ -56,14 +70,78 @@
                 },
                 {
                     "access": "Write",
-                    "defaultValue": "0.5",
+                    "defaultValue": "0.2",
                     "group": "Background Effect",
-                    "kuid": "g0121a95b7a34cb498334aeab3a9fb5c",
+                    "kuid": "jc496cb3b33b4f9488c1c83a510f0c58",
                     "originalPropertyKey": "backgroundDuration",
                     "propertyIndex": 5,
                     "propertyKey": "backgroundDuration",
                     "pw": {
                         "displayName": "Duration",
+                        "uiRepresentation": "Label-Textbox"
+                    },
+                    "srcWgtKUID": "f1dc28506f7749b68cb0f82b0dfa3ee8",
+                    "type": "string",
+                    "value": ""
+                },
+                {
+                    "access": "Write",
+                    "defaultValue": "0.25",
+                    "group": "Background Effect",
+                    "kuid": "c7247a3165794076a78e7c7c4c92e635",
+                    "originalPropertyKey": "backgroundOpacity",
+                    "propertyIndex": 7,
+                    "propertyKey": "backgroundOpacity",
+                    "pw": {
+                        "displayName": "Opacity",
+                        "uiRepresentation": "Label-Textbox"
+                    },
+                    "srcWgtKUID": "f1dc28506f7749b68cb0f82b0dfa3ee8",
+                    "type": "string",
+                    "value": ""
+                },
+                {
+                    "access": "Write",
+                    "defaultValue": "1.5",
+                    "group": "Ripple Effect",
+                    "kuid": "fb5e70ab5a01449089211c6e3572e2fb",
+                    "originalPropertyKey": "longRippleDuration",
+                    "propertyIndex": 6,
+                    "propertyKey": "longRippleDuration",
+                    "pw": {
+                        "displayName": "Long Duration",
+                        "uiRepresentation": "Label-Textbox"
+                    },
+                    "srcWgtKUID": "f1dc28506f7749b68cb0f82b0dfa3ee8",
+                    "type": "string",
+                    "value": ""
+                },
+                {
+                    "access": "Write",
+                    "defaultValue": "0.25",
+                    "group": "Ripple Effect",
+                    "kuid": "h8947793c53d42f19c0eb743fe8bb364",
+                    "originalPropertyKey": "rippleOpacity",
+                    "propertyIndex": 7,
+                    "propertyKey": "rippleOpacity",
+                    "pw": {
+                        "displayName": "Opacity",
+                        "uiRepresentation": "Label-Textbox"
+                    },
+                    "srcWgtKUID": "f1dc28506f7749b68cb0f82b0dfa3ee8",
+                    "type": "string",
+                    "value": ""
+                },
+                {
+                    "access": "Write",
+                    "defaultValue": "1.5",
+                    "group": "Background Effect",
+                    "kuid": "bdd6cfebe99b4c23bdf0ae96496cf260",
+                    "originalPropertyKey": "longBackgroundDuration",
+                    "propertyIndex": 6,
+                    "propertyKey": "longBackgroundDuration",
+                    "pw": {
+                        "displayName": "Long Duration",
                         "uiRepresentation": "Label-Textbox"
                     },
                     "srcWgtKUID": "f1dc28506f7749b68cb0f82b0dfa3ee8",
@@ -311,23 +389,6 @@
                         "wType": "FlexContainer"
                     },
                     "srcWgtKUID": "a0290c2be6694d1e81666910820c4a6a"
-                },
-                {
-                    "access": "Enable",
-                    "group": "Look & Feel",
-                    "kuid": "f6b88fce32a14eae9a572e92dafa4cbd",
-                    "originalPropertyKey": "focusSkin",
-                    "propertyIndex": 3,
-                    "propertyKey": "buttonFocusSkin",
-                    "pw": {
-                        "access": "readwrite",
-                        "category": "skin",
-                        "dependentKeysKUIDs": null,
-                        "displayName": "Button Focus Skin",
-                        "srcWidget": "button1",
-                        "wType": "Button"
-                    },
-                    "srcWgtKUID": "dc9c874b04924cef9adfe07235ff4fdd"
                 },
                 {
                     "access": "Enable",

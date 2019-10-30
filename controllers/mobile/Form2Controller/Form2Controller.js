@@ -2,7 +2,7 @@ define(function(){
 	return {
 		postShow: function(){
 			this.view.b3.onPressed = ()=>{
-				var n = new kony.mvc.Navigation("Form2");
+				var n = new kony.mvc.Navigation("Form1");
 				n.navigate();
 			};
 		},

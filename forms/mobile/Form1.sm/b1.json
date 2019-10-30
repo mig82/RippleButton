@@ -46,6 +46,7 @@
                 "value": "300dp"
             }
         },
+        "backgroundOpacity": "0.5",
         "backgroundWidth": {
             "Default": {
                 "type": "string",
@@ -53,12 +54,15 @@
             }
         },
         "buttonNormalSkin": "s303bb0dd90d47c4a9e4c1396f9db558",
+        "longRippleDuration": "1.5",
+        "rippleDuration": "0.5",
         "rippleHeight": {
             "Default": {
                 "type": "string",
                 "value": "300dp"
             }
         },
+        "rippleOpacity": "0.5",
         "rippleWidth": {
             "Default": {
                 "type": "string",
@@ -66,7 +70,7 @@
             }
         },
         "showRipple": true,
-        "text": "  b1 90% x 50Dp"
+        "text": ""
     },
     "enablescrolling": true,
     "id": "b1",

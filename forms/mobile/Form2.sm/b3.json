@@ -4,16 +4,12 @@
     "__parentReadjusting__": false,
     "_bottom_": {
         "type": "number",
-        "value": "0"
+        "value": "150"
     },
     "_children_": [],
     "_height_": {
         "type": "string",
         "value": "50dp"
-    },
-    "_left_": {
-        "type": "string",
-        "value": "5dp"
     },
     "_margin_": [
         0,
@@ -30,45 +26,61 @@
     ],
     "_percent_": true,
     "_render_": true,
-    "_skin_": "s133a656535149a3a939ad02be7deed1",
-    "_width_": {
+    "_right_": {
         "type": "string",
-        "value": "100dp"
+        "value": "10%"
     },
+    "_skin_": "s089d55edda4402fbcb5be64fb50d423",
     "autogrowmode": 0,
     "canUpdateUI": true,
+    "centerx": {
+        "type": "string",
+        "value": "50%"
+    },
     "clipbounds": true,
     "containerweight": 0,
     "data": {
+        "backgroundHeight": {
+            "Default": {
+                "type": "string",
+                "value": "350dp"
+            }
+        },
+        "backgroundWidth": {
+            "Default": {
+                "type": "string",
+                "value": "350dp"
+            }
+        },
+        "buttonNormalSkin": "s303bb0dd90d47c4a9e4c1396f9db558",
         "rippleDuration": "0.2",
         "rippleHeight": {
             "Default": {
                 "type": "string",
-                "value": "100dp"
+                "value": "350dp"
             }
         },
         "rippleWidth": {
             "Default": {
                 "type": "string",
-                "value": "100dp"
+                "value": "350dp"
             }
         },
-        "showBackground": true,
         "showRipple": true,
-        "text": ""
+        "text": "Go back"
     },
     "enablescrolling": true,
-    "id": "m1",
+    "id": "b3",
     "info": null,
     "iscustomlayout": false,
     "issegmentchild": false,
     "isvisible": true,
-    "kuid": "bde489daf8b643a0b28235ff7ad20a99",
+    "kuid": "c6c7dd9a5638423988fbab90c0eaf6bd",
     "layouttype": 2,
     "masterType": 1,
     "name": "kony.ui.UserWidgetInstance",
-    "parent": "Form1",
-    "pf": "Form1",
+    "parent": "Form2",
+    "pf": "Form2",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
     "retainflowhorizontalalignment": false,
