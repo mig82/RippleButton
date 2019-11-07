@@ -51,6 +51,7 @@
     "access_pimdomain_messages": "false",
     "access_shared": "false",
     "access_sms_mms": "false",
+    "accountCloudGuid": "0efeca2c-d80f-47db-9cae-bfa681b5bb39",
     "allJoyn": "false",
     "allowselfsignedcertificate": "false",
     "andmaxsdkkey": "None",
@@ -645,11 +646,20 @@
     "previewshowpassword": "false",
     "privateNetworkClientServer": "false",
     "project.type": "js",
+    "projectCloudGuid": "681621d9-e981-46f4-a906-bbea55f4805f",
     "project_version": "sprint34",
     "protectedmodeenabled_android": "false",
     "protectedmodeenabled_androidwear": "false",
     "protectedmodeenabled_ios": "false",
-    "prototype": {},
+    "prototype": {
+        "PublishMode": "public",
+        "createdBy": "Miguel%E1ngel Fern%E1ndez",
+        "createdById": "0f750f64-586b-4488-9a72-0e4b44d613ba",
+        "createdOn": "2019-11-07T12:47:34.132Z",
+        "password": "",
+        "resourceId": "ca4f4114-4dda-4e83-be47-eb589c0f2432",
+        "shareGuid": "NAIEG"
+    },
     "proximity": "false",
     "read_device_identifying_information": "false",
     "referenceWidth": "375",
@@ -686,7 +696,7 @@
     "support64bitandwear": "false",
     "supportX86Devices": "false",
     "supportX86Devicesandwear": "false",
-    "tabletstartupformkey": "d77b2be85f074bacad6b798553eea51d",
+    "tabletstartupformkey": "e49577279eae4d5cb884808aa947685e",
     "tags": {
         "android": {
             "activity_child_tags": "",

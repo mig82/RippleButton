@@ -5,7 +5,7 @@
     "_children_": [],
     "_height_": {
         "type": "string",
-        "value": "50dp"
+        "value": "100dp"
     },
     "_margin_": [
         0,
@@ -33,7 +33,7 @@
     },
     "_width_": {
         "type": "string",
-        "value": "50dp"
+        "value": "100dp"
     },
     "autogrowmode": 0,
     "canUpdateUI": true,
@@ -43,28 +43,30 @@
         "backgroundHeight": {
             "Default": {
                 "type": "string",
-                "value": "50dp"
+                "value": "100dp"
             }
         },
-        "backgroundOpacity": "0.25",
+        "backgroundOpacity": "0",
         "backgroundWidth": {
             "Default": {
                 "type": "string",
-                "value": "50dp"
+                "value": "100dp"
             }
         },
         "buttonNormalSkin": "s59b14dfab69403dad8e512745f0cfe6",
+        "longRippleDuration": "1.5",
+        "rippleDuration": "0.2",
         "rippleHeight": {
             "Default": {
                 "type": "string",
-                "value": "50dp"
+                "value": "100dp"
             }
         },
-        "rippleOpacity": "0.5",
+        "rippleOpacity": "0.8",
         "rippleWidth": {
             "Default": {
                 "type": "string",
-                "value": "50dp"
+                "value": "100dp"
             }
         },
         "showRipple": true,
@@ -76,7 +78,7 @@
     "iscustomlayout": false,
     "issegmentchild": false,
     "isvisible": true,
-    "kuid": "ca73b2c6c89748458a99a6b4437289b9",
+    "kuid": "hb346ee37d924462b240c28a081b053d",
     "layouttype": 2,
     "masterType": 1,
     "name": "kony.ui.UserWidgetInstance",

@@ -22,6 +22,12 @@ Here are some examples of what this looks like:
 * This project was built using Kony Quantum 8.4.43.
 * I've tried and tested this component in Android native, iOS native and Web applications.
 
+## Preview Code
+
+To preview of this project in Visualizer Quantum, use preview code: **NAIEG**
+
+![Preview Code](./pics/preview_code.png)
+
 ## Other Considerations
 
 This component uses Font Awesome for the button icons. You'll have to import

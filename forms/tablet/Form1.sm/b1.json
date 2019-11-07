@@ -43,30 +43,35 @@
         "backgroundHeight": {
             "Default": {
                 "type": "string",
-                "value": "600dp"
+                "value": "700dp"
             }
         },
+        "backgroundOpacity": "0.5",
         "backgroundWidth": {
             "Default": {
                 "type": "string",
-                "value": "600dp"
+                "value": "700dp"
             }
         },
         "buttonNormalSkin": "s303bb0dd90d47c4a9e4c1396f9db558",
+        "longRippleDuration": "1.5",
+        "rippleDuration": "0.5",
         "rippleHeight": {
             "Default": {
                 "type": "string",
-                "value": "600dp"
+                "value": "700dp"
             }
         },
+        "rippleOpacity": "0.5",
         "rippleWidth": {
             "Default": {
                 "type": "string",
-                "value": "600dp"
+                "value": "700dp"
             }
         },
+        "showBackground": true,
         "showRipple": true,
-        "text": "  b1 90% x 50Dp"
+        "text": ""
     },
     "enablescrolling": true,
     "id": "b1",
@@ -74,7 +79,7 @@
     "iscustomlayout": false,
     "issegmentchild": false,
     "isvisible": true,
-    "kuid": "ec3830ef1e6e4ad692e35b29b4114180",
+    "kuid": "ab991e0fc3354c2f9980482ae5aa6325",
     "layouttype": 2,
     "masterType": 1,
     "name": "kony.ui.UserWidgetInstance",
